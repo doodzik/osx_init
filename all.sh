@@ -4,4 +4,6 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/basi
 bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev.sh)
 bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/gui.sh)
 
+open ~/.dudzik.terminal
+
 exit 0
