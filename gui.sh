@@ -7,6 +7,7 @@ guis=(
   skype
   flux
   appcleaner
+  iterm2
 )
 
 brew cask install ${guis[@]}
