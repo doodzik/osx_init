@@ -6,4 +6,6 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/gui.
 
 open ~/.dudzik.terminal
 
+echo "Done. Restart to take effect."
+
 exit 0
