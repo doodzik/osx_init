@@ -18,6 +18,7 @@ sleep 2
 open -a System\ Preferences
 osascript -e 'tell application "Safari"
                 open location "https://www.ublock.org"
+                open location "http://web.whatsapp.com"
               end tell'
 open -a Flux
 open -a Skype
