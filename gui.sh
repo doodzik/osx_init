@@ -1,6 +1,6 @@
-brew install youtube-dl
-
 echo "installing gui..."
+
+brew install youtube-dl
 
 guis=(
   vlc
@@ -12,8 +12,16 @@ guis=(
 
 brew cask install ${guis[@]}
 
-echo "log into:\n"
-echo "skype\n"
+echo 'setup icloud && opening apps'
+echo 'Press [Enter] if done'
+sleep 2
+open -a System\ Preferences
+osascript -e 'tell application "Safari"
+                open location "https://www.ublock.org"
+              end tell'
+open -a Flux
+open -a Skype
+read -p ''
 
 # disable desktop
 defaults write com.apple.finder CreateDesktop -bool FALSE
