@@ -6,7 +6,7 @@ guis=(
   vlc
   skype
   flux
-  appcleaner
+  anki
   iterm2
 )
 
@@ -21,6 +21,7 @@ osascript -e 'tell application "Safari"
                 open location "http://web.whatsapp.com"
               end tell'
 open -a Flux
+open -a Anki
 open -a Skype
 read -p ''
 

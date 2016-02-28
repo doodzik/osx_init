@@ -12,6 +12,7 @@ cmds=(
   nvm
   selecta
   npm-scripts
+  rmapp
 )
 
 brew install ${cmds[@]}
