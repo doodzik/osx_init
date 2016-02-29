@@ -19,6 +19,7 @@ open -a System\ Preferences
 osascript -e 'tell application "Safari"
                 open location "https://www.ublock.org"
                 open location "http://web.whatsapp.com"
+                open location "https://github.com/guyht/vimari/releases/latest"
               end tell'
 open -a Flux
 open -a Anki
