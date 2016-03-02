@@ -37,6 +37,9 @@ defaults write com.apple.dt.Xcode DVTTextIndentUsingTabs -bool false
 # Show tab bar
 defaults write com.apple.dt.Xcode AlwaysShowTabBar -bool true
 
+# enable safari dev mode
+defaults write com.apple.Safari WebKitDeveloperExtras -bool true 
+
 bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/system.sh)
 
 # ==============================================
