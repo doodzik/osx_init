@@ -8,6 +8,8 @@ brew tap doodzik/tap https://github.com/doodzik/tap
 cmds=(
   caskroom/cask/brew-cask
   vim
+  neovim/neovim/neovim
+  zsh
   git
   nvm
   selecta
