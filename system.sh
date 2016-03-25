@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+set -x
+
 # monitor changes to the settings
 # sudo opensnoop -n cfprefsd-int-int
 

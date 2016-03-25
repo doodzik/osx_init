@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+set -x
+
 echo "installing gui..."
 
 brew install youtube-dl
