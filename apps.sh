@@ -42,24 +42,7 @@ open -a Anki
 open -a Skype
 read -p ''
 
-# ==============================================
-# Xcode
-# ==============================================
-echo "Setting Xcode preferences"
-
-# Always use spaces for indenting
-defaults write com.apple.dt.Xcode DVTTextIndentUsingTabs -bool false
-
-# Show tab bar
-defaults write com.apple.dt.Xcode AlwaysShowTabBar -bool true
-
 # enable safari dev mode
-defaults write com.apple.Safari WebKitDeveloperExtras -bool true 
+defaults write com.apple.Safari WebKitDeveloperExtras -bool true
 
-bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/system.sh)
-
-# ==============================================
-# restart
-# ==============================================
-killall SystemUIServer
-killall Finder
+echo "set ublock cookie warning"

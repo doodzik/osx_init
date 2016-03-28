@@ -9,14 +9,18 @@
 * Click on Reinstall OS X
 * run basic/gui/dev script in CLI 
 
-## basic/gui/dev script
+## runs all of the Underneath
 bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/all.sh)
 
-## basic script
-bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/basic.sh)
+## sets up basic dev environment
+bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev_env.sh)
 
-## dev script
-bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev.sh)
+## sets the user dev credentials up
+bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev_env_user.sh)
 
-## gui script
-bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/gui.sh)
+## installs guis
+bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/apps.sh)
+
+## configures system
+bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/system_config.sh)
+

@@ -2,12 +2,12 @@
 
 set -x
 
-# monitor changes to the settings
-# sudo opensnoop -n cfprefsd-int-int
-
 # ==============================================
 # system
 # ==============================================
+# monitor changes to the settings
+# sudo opensnoop -n cfprefsd-int-int
+
 # disable gateskeeper
 sudo spctl --master-disable
 
@@ -58,3 +58,9 @@ mv com\~apple\~CloudDocs iCloud
 # symbolic hotkeys
 # Select the previous input source - Command, Option, Space
 defaults write ~/Library/Preferences/com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 60 "{ enabled = 1; value = { parameters = ( 32, 49, 262144 ); type = standard; }; }"
+
+# ==============================================
+# restart
+# ==============================================
+killall SystemUIServer
+killall Finder

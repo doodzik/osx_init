@@ -2,9 +2,10 @@
 
 set -x
 
-bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/basic.sh)
-bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev.sh)
-bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/gui.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev_env.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev_env_user.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/apps.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/system_config.sh)
 
 open ~/.dudzik.terminal
 
