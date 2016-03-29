@@ -6,6 +6,7 @@ set -x
 command -v brew >/dev/null 2>&1 || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap doodzik/tap https://github.com/doodzik/tap
+brew tap homebrew/dupes # for screen
 
 cmds=(
   caskroom/cask/brew-cask
@@ -16,6 +17,7 @@ cmds=(
   selecta
   npm-scripts
   rmapp
+  screen
 )
 
 brew install ${cmds[@]}
