@@ -25,6 +25,7 @@ osascript -e 'tell application "Safari" to activate
                 open location "https://www.ublock.org"
                 open location "http://web.whatsapp.com"
                 open location "https://github.com/guyht/vimari/releases/latest"
+                open location "http://www.bumblebeesystems.com/wastenotime/"
 
                 delay 1
                 tell application "System Events" to tell process "Safari"
@@ -45,4 +46,7 @@ read -p ''
 # enable safari dev mode
 defaults write com.apple.Safari WebKitDeveloperExtras -bool true
 
-echo "set ublock cookie warning"
+echo "set ublock eu cookie warning"
+echo "import waste no time config"
+echo "press [enter] to continue"
+read -p ''
