@@ -12,6 +12,7 @@ guis=(
   flux
   anki
   iterm2
+  macid
 )
 
 brew cask install ${guis[@]}

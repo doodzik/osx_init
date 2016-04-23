@@ -18,7 +18,11 @@ cmds=(
   npm-scripts
   rmapp
   screen
+  ghi
 )
+
+# dep for ghi
+gem install pygments.rb
 
 brew install ${cmds[@]}
 

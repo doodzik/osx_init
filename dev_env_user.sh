@@ -20,5 +20,7 @@ echo 'Press [Enter] key when added key to github'
 sleep 2
 open https://github.com/settings/ssh
 read -p ''
+echo "ghi"
+ghi config --auth doodzik
 echo "npm"
 npm adduser doodzik
