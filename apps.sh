@@ -35,7 +35,7 @@ osascript -e 'tell application "Safari" to activate
                   tell group 1 of group 1 of window 1
                       tell pop up button 6
                         click
-                        click menu item "After two weeks" of menu 1
+                        click menu item "After one week" of menu 1
                       end tell
                   end tell
               end tell'
