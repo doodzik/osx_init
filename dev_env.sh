@@ -15,10 +15,11 @@ cmds=(
   git
   nvm
   selecta
-  npm-scripts
-  rmapp
   screen
   ghi
+  npm-scripts
+  rmapp
+  simple_task
 )
 
 # dep for ghi
