@@ -20,6 +20,7 @@ cmds=(
   npm-scripts
   rmapp
   simple_task
+  tldr-pages/tldr/tldr
 )
 
 # dep for ghi
