@@ -17,10 +17,11 @@ cmds=(
   selecta
   screen
   ghi
+  tldr-pages/tldr/tldr
   npm-scripts
   rmapp
   simple_task
-  tldr-pages/tldr/tldr
+  bash_join
 )
 
 # dep for ghi
