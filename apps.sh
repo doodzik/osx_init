@@ -8,7 +8,6 @@ brew install youtube-dl
 
 guis=(
   vlc
-  skype
   flux
   anki
   iterm2
@@ -41,7 +40,6 @@ osascript -e 'tell application "Safari" to activate
               end tell'
 open -a Flux
 open -a Anki
-open -a Skype
 read -p ''
 
 # enable safari dev mode

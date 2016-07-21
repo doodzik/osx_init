@@ -20,8 +20,6 @@ cmds=(
   tldr-pages/tldr/tldr
   npm-scripts
   rmapp
-  simple_task
-  bash_join
 )
 
 # dep for ghi
@@ -31,6 +29,8 @@ brew install ${cmds[@]}
 
 brew cask install vagrant
 brew cask install virtualbox
+
+vagrant plugin install vagrant-vbguest
 
 # setup node
 mkdir ~/.nvm
