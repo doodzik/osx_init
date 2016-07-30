@@ -88,7 +88,12 @@ git init
 git remote add origin https://github.com/doodzik/dotfiles.git
 git fetch
 git checkout -t origin/master
-git submodule update --init --recursive
+git submodule update --init --recursive --remote
+
+cd .zprezto
+git submodule update --init --recursive --remote
+
+cd ~
 
 # ==============================================
 # zsh
