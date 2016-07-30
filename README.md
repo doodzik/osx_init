@@ -15,12 +15,8 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/all.
 ## sets up basic dev environment
 bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev_env.sh)
 
-## sets the user dev credentials up
-bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/dev_env_user.sh)
-
 ## installs guis
 bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/apps.sh)
 
 ## configures system
 bash <(curl -fsSL https://raw.githubusercontent.com/Doodzik/osx_init/master/system_config.sh)
-

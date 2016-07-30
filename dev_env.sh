@@ -2,14 +2,25 @@
 
 set -x
 
-# install homebrew
+sudo -s
+
+if [ $? -ne 0 ]; then
+    echo "please run the script again with a correct password"
+    exit 1
+fi
+
+
+# ==============================================
+# homebrew
+# ==============================================
+
 command -v brew >/dev/null 2>&1 || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap doodzik/tap https://github.com/doodzik/tap
 brew tap homebrew/dupes # for screen
+brew tap caskroom/cask
 
 cmds=(
-  caskroom/cask/brew-cask
   vim
   zsh
   git
@@ -22,6 +33,7 @@ cmds=(
   npm-scripts
   rmapp
   find_with_gitignore
+  bash_join
 )
 
 # dep for ghi
@@ -34,6 +46,10 @@ brew cask install virtualbox
 
 vagrant plugin install vagrant-vbguest
 
+# ==============================================
+# nvm
+# ==============================================
+
 # setup node
 mkdir ~/.nvm
 . $(brew --prefix nvm)/nvm.sh
@@ -41,8 +57,31 @@ nvm install 5
 nvm use 5
 nvm alias default 5
 
-# no blurry font
-defaults write com.apple.Terminal AppleFontSmoothing -int 0
+# ==============================================
+# github
+# ==============================================
+
+git config --global user.name "Frederik Dudzik"
+git config --global user.email frederik@dudzik.co
+git config --global push.default simple
+git config --global core.editor vim
+git config --global credential.helper osxkeychain
+ssh-keygen -t rsa -b 4096 -C "frederik@dudzik.co"
+eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+
+# echo in red
+tput setaf 1
+echo 'copied key to clipboard. opening github settings.'
+# stop echoing in red
+tput sgr0
+
+echo 'Press [Enter] key when added key to github'
+sleep 2
+open https://github.com/settings/ssh
+read -p ''
+echo "ghi"
+ghi config --auth doodzik
 
 # setup repo for dotfiles
 git init
@@ -50,6 +89,14 @@ git remote add origin https://github.com/doodzik/dotfiles.git
 git fetch
 git checkout -t origin/master
 git submodule update --init --recursive
+
+# ==============================================
+# zsh
+# ==============================================
+
+touch ~/.zshrc
+/usr/local/bin/zsh
+rm ~/.zshrc
 
 # Create a new Zsh configuration by copying the Zsh configuration files provided:
 setopt EXTENDED_GLOB
@@ -72,4 +119,3 @@ defaults write com.apple.dt.Xcode DVTTextIndentUsingTabs -bool false
 # Show tab bar
 defaults write com.apple.dt.Xcode AlwaysShowTabBar -bool true
 
-/usr/local/bin/zsh

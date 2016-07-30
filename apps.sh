@@ -26,8 +26,9 @@ osascript -e 'tell application "Safari" to activate
                 open location "http://web.whatsapp.com"
                 open location "https://github.com/guyht/vimari/releases/latest"
                 open location "http://www.bumblebeesystems.com/wastenotime/"
+                open location "http://messenger.com"
 
-                delay 1
+                delay 3
                 tell application "System Events" to tell process "Safari"
                   keystroke "," using command down
 
@@ -40,6 +41,7 @@ osascript -e 'tell application "Safari" to activate
               end tell'
 open -a Flux
 open -a Anki
+open -a macid
 read -p ''
 
 # enable safari dev mode

@@ -11,15 +11,16 @@ set -x
 # disable gateskeeper
 sudo spctl --master-disable
 
-#multitouch/trackpad
+# multitouch/trackpad
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 2;
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 1;
 defaults write -g com.apple.trackpad.scaling 3
 
-#keyboard
+# keyboard
 defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 0; "KeyboardLayout Name" = "U.S"; }'
 defaults write InitialKeyRepeat -int 15
 defaults write KeyRepeat -int 2
+
 # capslock to cntr
 # ~/Library/Preferences/ByHost/.GlobalPreferences
 mappingplist=com.apple.keyboard.modifiermapping.1452-585-0
@@ -28,18 +29,18 @@ defaults -currentHost write -g $mappingplist '({
     HIDKeyboardModifierMappingSrc = 0;
   })'
 
-#notification settings
+# notification settings
 defaults write com.apple.notificationcenterui dndEnd   -int 420
 defaults write com.apple.notificationcenterui dndStart -int 1320
 
-#menu bar
+# menu bar
 defaults read com.apple.menuextra.battery ShowPercent -bool YES
 
-#users
+# users
 defaults write com.apple.loginwindow GuestEnabled -bool NO
 defaults write com.apple.loginwindow SHOWFULLNAME -int 1
 
-#dock
+# dock
 defaults write com.apple.dock autohide  -int 1
 defaults write com.apple.dock mineffect -string 'scale'
 defaults write com.apple.dock persistent-apps '()'
@@ -58,6 +59,9 @@ mv com\~apple\~CloudDocs iCloud
 # symbolic hotkeys
 # Select the previous input source - Command, Option, Space
 defaults write ~/Library/Preferences/com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 60 "{ enabled = 1; value = { parameters = ( 32, 49, 262144 ); type = standard; }; }"
+
+# no blurry font
+defaults write com.apple.Terminal AppleFontSmoothing -int 0
 
 # ==============================================
 # restart
