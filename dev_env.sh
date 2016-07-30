@@ -17,9 +17,11 @@ cmds=(
   selecta
   screen
   ghi
-  tldr-pages/tldr/tldr
+  wifi-password
+  tidy-html5
   npm-scripts
   rmapp
+  find_with_gitignore
 )
 
 # dep for ghi
