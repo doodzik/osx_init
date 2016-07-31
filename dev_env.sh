@@ -66,6 +66,7 @@ git config --global user.email frederik@dudzik.co
 git config --global push.default simple
 git config --global core.editor vim
 git config --global credential.helper osxkeychain
+git config --global core.excludesfile ~/.gitignore_osx
 ssh-keygen -t rsa -b 4096 -C "frederik@dudzik.co"
 eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
 pbcopy < ~/.ssh/id_rsa.pub
