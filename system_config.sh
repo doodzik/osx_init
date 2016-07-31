@@ -9,7 +9,7 @@ set -x
 # sudo opensnoop -n cfprefsd-int-int
 
 # disable gateskeeper
-sudo spctl --master-disable
+m gatekeeper disable
 
 # multitouch/trackpad
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 2;
@@ -41,9 +41,13 @@ defaults write com.apple.loginwindow GuestEnabled -bool NO
 defaults write com.apple.loginwindow SHOWFULLNAME -int 1
 
 # dock
-defaults write com.apple.dock autohide  -int 1
+m dock autohide YES
 defaults write com.apple.dock mineffect -string 'scale'
 defaults write com.apple.dock persistent-apps '()'
+
+# finder
+m finder showhiddenfiles YES
+m finder showextensions YES
 
 # Don't offer new disks for backup
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true

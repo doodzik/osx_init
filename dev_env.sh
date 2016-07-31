@@ -28,7 +28,7 @@ cmds=(
   selecta
   screen
   ghi
-  wifi-password
+  m-cli
   tidy-html5
   npm-scripts
   rmapp
