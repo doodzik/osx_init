@@ -28,6 +28,10 @@ osascript -e 'tell application "Safari" to activate
                 open location "http://www.bumblebeesystems.com/wastenotime/"
                 open location "http://messenger.com"
 
+                open location "https://ankiweb.net/shared/info/3448800906"
+                open location "https://ankiweb.net/shared/info/1600138415"
+                open location "https://ankiweb.net/shared/info/315734179"
+
                 delay 3
                 tell application "System Events" to tell process "Safari"
                   keystroke "," using command down
