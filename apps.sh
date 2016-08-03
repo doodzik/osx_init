@@ -23,10 +23,8 @@ open -a System\ Preferences
 
 osascript -e 'tell application "Safari" to activate
                 open location "https://www.ublock.org"
-                open location "http://web.whatsapp.com"
                 open location "https://github.com/guyht/vimari/releases/latest"
                 open location "http://www.bumblebeesystems.com/wastenotime/"
-                open location "http://messenger.com"
 
                 open location "https://ankiweb.net/shared/info/3448800906"
                 open location "https://ankiweb.net/shared/info/1600138415"
